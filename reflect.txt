@@ -1,0 +1,35 @@
+/**********************************************
+ Workshop #4 & 5
+ Course: APD545
+ Section: NCC
+ Last Name: Pahurkar
+ First Name: Harsh
+ ID: 115587222
+ This assignment represents my own work in accordance with Seneca Academic Policy.
+ Date: March 16, 2025
+ **********************************************/
+
+1. If you would've used the Property types rather than the primitive data types?
+Using `Property` types like `SimpleStringProperty` over `String` would be useful in JavaFX applications.
+Property types enable automatic UI updating when data is changed without manually refreshing UI components.
+The application would then be more responsive and less dependent on explicit listener management.
+In this specific project, since the data isn't being dynamically updated in the UI,
+using primitive data types is acceptable and is more efficient with less overhead.
+
+2. What was the most challenging aspect of working with inventory limits?
+The most challenging aspect of working with inventory limits was making sure that
+stock quantities met the required `min` and `max` values. Including validation logic to prevent incorrect data entry
+was essential. For instance, preventing users from setting `min` greater than `max` or
+inputting stock quantities outside this range required careful error handling and user-friendly alerts.
+
+3. How did you ensure the application prevents invalid operations?
+A number of validation checks were employed to prevent invalid operations from occurring:
+- Inventory Constraints: Triggers are established if the inventories are more than `max` or less than `min`.
+- Product-Part Relationship: Deleting a product is impossible if it has parts.
+- Price Constraints: The total of the price of the products cannot be lower than the prices of its parts.
+- Confirmation Dialogs: Implemented for delete and cancel operations so that data is not lost by mistake.
+- Required Fields: Checking each product has a name, price, and stock value before saving.
+
+All these checks secure the integrity of data and ensure no logical mistakes are made in managing inventory.
+
+

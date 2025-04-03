@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="850.0" style="-fx-background-color: #f5f5f7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.harshpahurkar.workshop_4.Controllers.AddProductController">
+    <top>
+        <VBox alignment="CENTER" prefHeight="90.0" prefWidth="650.0" style="-fx-background-color: #3498db;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="70.0" prefWidth="800.0" text="Add Product" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow height="10.0" radius="4.5" width="10.0" />
+            </effect>
+        </VBox>
+    </top>
+    <center>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="300.0" spacing="25.0">
+                    <children>
+                        <GridPane hgap="15.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8;" vgap="20.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="ID:" textFill="#333333">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Name:" textFill="#333333" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Inventory:" textFill="#333333" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Price/Cost:" textFill="#333333" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="idField" disable="true" editable="false" promptText="Auto-generated" style="-fx-background-color: #f0f0f0; -fx-background-radius: 4;" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="nameField" promptText="Product Name" style="-fx-background-radius: 4;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="stockField" promptText="Inventory Level" style="-fx-background-radius: 4;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="priceField" promptText="Price/Cost" style="-fx-background-radius: 4;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <children>
+                                        <TextField fx:id="maxField" promptText="Max" prefWidth="90.0" style="-fx-background-radius: 4;">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label text="Min:" textFill="#333333">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="minField" promptText="Min" prefWidth="90.0" style="-fx-background-radius: 4;">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <Label text="Max/Min:" textFill="#333333" GridPane.rowIndex="4">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                            <effect>
+                                <DropShadow color="#00000022" height="5.0" radius="2.0" width="5.0" />
+                            </effect>
+                        </GridPane>
+                    </children>
+                    <HBox.margin>
+                        <Insets top="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="500.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <VBox spacing="10.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8;">
+                            <children>
+                                <Label text="Available Parts" textFill="#333333">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Label>
+                                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                    <children>
+                                        <TextField fx:id="partSearchField" promptText="Search by ID or Name" style="-fx-background-radius: 4;">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <Button mnemonicParsing="false" onAction="#handleSearchPartButton" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 4;" text="Search">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="availablePartsTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 4; -fx-border-radius: 4; -fx-border-color: #dddddd;">
+                                    <columns>
+                                        <TableColumn fx:id="availablePartIdColumn" prefWidth="75.0" text="Part ID" />
+                                        <TableColumn fx:id="availablePartNameColumn" prefWidth="150.0" text="Part Name" />
+                                        <TableColumn fx:id="availablePartStockColumn" prefWidth="100.0" text="Inventory Level" />
+                                        <TableColumn fx:id="availablePartPriceColumn" prefWidth="100.0" text="Price/Cost per Unit" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="addPartButton" mnemonicParsing="false" onAction="#handleAddPartButton" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 4;" text="Add">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                            <effect>
+                                                <DropShadow color="#00000022" height="5.0" radius="2.0" width="5.0" />
+                                            </effect>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                            <effect>
+                                <DropShadow color="#00000022" height="5.0" radius="2.0" width="5.0" />
+                            </effect>
+                        </VBox>
+                        <VBox spacing="10.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8;">
+                            <children>
+                                <Label text="Associated Parts" textFill="#333333">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <TableView fx:id="associatedPartsTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 4; -fx-border-radius: 4; -fx-border-color: #dddddd;">
+                                    <columns>
+                                        <TableColumn fx:id="associatedPartIdColumn" prefWidth="75.0" text="Part ID" />
+                                        <TableColumn fx:id="associatedPartNameColumn" prefWidth="150.0" text="Part Name" />
+                                        <TableColumn fx:id="associatedPartStockColumn" prefWidth="100.0" text="Inventory Level" />
+                                        <TableColumn fx:id="associatedPartPriceColumn" prefWidth="100.0" text="Price/Cost per Unit" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="removePartButton" mnemonicParsing="false" onAction="#handleRemovePartButton" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 4;" text="Remove Associated Part">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                            <effect>
+                                                <DropShadow color="#00000022" height="5.0" radius="2.0" width="5.0" />
+                                            </effect>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                            <effect>
+                                <DropShadow color="#00000022" height="5.0" radius="2.0" width="5.0" />
+                            </effect>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets left="25.0" right="25.0" top="15.0" />
+            </BorderPane.margin>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Save">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#00000040" height="5.0" radius="2.0" width="5.0" />
+                    </effect>
+                </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="Cancel">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#00000040" height="5.0" radius="2.0" width="5.0" />
+                    </effect>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="25.0" right="25.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+</BorderPane>
